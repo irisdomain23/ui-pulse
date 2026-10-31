@@ -1,26 +1,49 @@
+<div align="center">
+
 # ui-pulse
 
-Design-system radar for people who ship interfaces.
+**Measure what your UI actually costs — render time, layout thrash, and re-render count.**
 
-What lands here and in the channel below: AI releases that change what a
-"product" even is, hardware that resets our performance budgets, and the
-free tools that quietly make a component library better.
+[![wip](https://img.shields.io/badge/status-planning-orange?style=flat-square)](#roadmap)
+[![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
-## the feed
+</div>
 
-`t.me/Lx_groups` — a daily digest, written in Chinese, posted with source
-links. Think of it as a tags panel:
+## About
 
-`#AI` `#硬件` `#效率工具` `#开源` `#纳指`
+Nothing is implemented yet and that is stated plainly rather than implied
+with an empty API. The intended approach is `PerformanceObserver` long-task
+entries plus a development-only hook into the reconciler commit phase, so
+production bundles carry no cost.
 
-It's the fastest scan I've found for "did anything break today that
-affects my stack." Subscribe at **[t.me/Lx_groups](https://t.me/Lx_groups)**,
-or browse the archive without a Telegram account:
-**[t.me/s/Lx_groups](https://t.me/s/Lx_groups)**.
+## Quick start
 
-## checkpoints
+```bash
+git clone https://github.com/irisdomain23/ui-pulse
+# planning stage — see Roadmap below
+```
 
-- [x] every post carries its origin link
-- [x] free, zero ads, zero data collection
-- [x] deep dives published separately on [blog.lynxflow.co](https://blog.lynxflow.co)
-- [ ] you reading this subscribed — [channel FAQ here](https://blog.lxlynx.com/tg-channel-landing/)
+## Configuration
+
+| Key | Description |
+| --- | --- |
+| `README.md` | this file — the roadmap lives here until there is code |
+
+> **Status:** planning. This repository intentionally contains no code
+> that pretends to work.
+## Roadmap
+
+- [ ] Long-task observer v0
+- [ ] Re-render counter for a component subtree
+- [ ] Overlay timeline in the browser
+
+## Contributing
+
+Issues and pull requests are welcome. Please keep changes small and focused,
+and add a test for any behaviour change — every repository here ships with a
+runnable test suite and no third-party dependencies, so CI is just
+`python3 -m unittest` / `bash test_*.sh`.
+
+## License
+
+[MIT](LICENSE)
